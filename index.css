@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Hanken Grotesk", Arial, sans-serif;
+    background-color: #262626;
+    color: #D9D9D9;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+
+    justify-content: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+header{
+    text-align: center;
+
+}
+header > h1{
+    font-size: 1.35rem;
+    font-weight: 500;
+    color:bisque
+}
+
+header > p{
+    /* font-size: rem; */
+    max-width: 400px;
+    color:rgb(255, 251, 247);
+    font-weight: 400;
+
+}
+.game-status{
+   
+    /* padding: 10px 0; */
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    /* margin:10px 0; */
+    max-width: 400px ;
+    margin-block: 30px;
+}
+section.game-status.game-won{
+background-color: rgb(37, 99, 37);
+
+}
+
+
+section.game-status.game-lost{
+    background-color: rgb(155,17,17);
+    
+}
+.game-status > h2{
+    margin: 0;
+
+}
+.game-status > p{
+    margin: 5px;
+    text-align: center;
+
+}
+
+.language-list{
+    display: flex;
+    flex-wrap:wrap ;
+    gap:5px;
+    justify-content: center;
+    max-width: 350px;
+}
+
+span.chip{
+    border-radius: 3px;
+    padding: 3px 5px;
+    position: relative;
+}
+
+.word-display{
+    
+    display: flex;
+    justify-content: center;
+    margin:25px;
+    gap:5px;
+
+}
+
+.letter.hidden{
+    color: transparent;
+}
+.letter.red{
+    color:rgb(155, 17, 17);
+    background-color: rgb(23, 22, 22);
+}
+.letter.green{
+    color: rgb(32, 90, 32);
+    background-color: rgb(23, 22, 22);
+}
+
+.letter{
+    background-color: #333333;
+    padding:7px 15px;
+    font-size: 1.55rem;
+    border-radius: 4px;
+    border-bottom: 2px solid #D9D9D9;
+    font-weight: 600;
+    color:white;
+
+}
+.alphabet{
+    display: flex;
+   
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    /* margin: 20px 0; */
+    max-width: 450px;
+    gap:10px;
+}
+
+.alphabet button{
+    font-size: 1.1rem;
+    cursor: pointer;
+    border:1px solid #D9D9D9;
+    background-color: rgb(224, 170, 71);
+     padding:7px 12px;
+     color:black;
+    
+     border-radius: 4px;
+     font-weight: 600;
+
+
+}
+.remaining{
+    margin-top:30px;
+
+}
+.counter{
+    font-size: 1.35rem;
+}
+.new-game{
+   margin:30px 0;
+   padding:7px 40px;
+   background-color: #15addc;
+   cursor: pointer;
+   border-radius: 4px;
+   /* font-size: 1.05rem; */
+   font-weight: 600;
+   border: 1px solid #D9D9D9;
+   font-size:1.1rem ;
+
+   
+}
+
+button.correct{
+    background-color: rgb(32, 90, 32);
+    color:white;
+}
+
+button.wrong{
+    background-color: rgb(155, 17, 17);
+}
+
+span.chip.lost::before{
+    content:'X';
+    color:white;
+    font-weight: 800;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+width:100%;
+font-size:0.85rem;
+top:0;
+left:0;
+z-index: 1;
+background-color: rgba(0,0,0,0.7);}
+
+
+
+section.game-status.farewell{
+    background-color: #592ba8;
+    width:350px;
+    border:1px dashed white;
+    font-style: italic;
+    font-weight: 400;
+}
+
+button:disabled{
+    /* background-color:  rgba(224, 170, 71,0.5); */
+    cursor: not-allowed;
+    opacity: 0.6;
+}
